@@ -2,7 +2,7 @@ package allcodes;
 
 import java.util.*;
 
-// Customer class
+
 class Customer {
     private String customerId;
     private String name;
@@ -21,7 +21,7 @@ class Customer {
     }
 }
 
-// Account class
+
 class Account {
     private String accountNumber;
     private double balance;
@@ -64,7 +64,7 @@ class Account {
     }
 }
 
-// Bank class
+
 class Bank {
     private HashMap<String, Customer> customers = new HashMap<>();
     private HashMap<String, Account> accounts = new HashMap<>();
@@ -127,7 +127,7 @@ class Bank {
     }
 }
 
-// Main class
+
 public class BankingSystemDemo {
     public static void main(String[] args) {
         Bank bank = new Bank();
