@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class SimpleLoginSystem {
 
-    // JDBC URL to connect to MySQL via XAMPP
+    
     static final String DB_URL = "jdbc:mysql://localhost:3306/userdb";
     static final String DB_USER = "root";
     static final String DB_PASSWORD = ""; 
 
-    // Session simulation
+
     static boolean isLoggedIn = false;
     static String currentUser = null;
 
