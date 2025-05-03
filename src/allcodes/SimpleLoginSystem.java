@@ -58,15 +58,15 @@ public class SimpleLoginSystem {
             stmt.setString(1, username);
             stmt.setString(2, password); // For demo purposes, no hashing
             stmt.executeUpdate();
-            System.out.println("✅ Registration successful!");
+            System.out.println(" Registration successful!");
         } catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("❌ Username already exists.");
+            System.out.println(" Username already exists.");
         }
     }
 
     static void login(Scanner scanner, Connection conn) throws SQLException {
         if (isLoggedIn) {
-            System.out.println("⚠️ Already logged in as: " + currentUser);
+            System.out.println(" Already logged in as: " + currentUser);
             return;
         }
 
@@ -86,18 +86,18 @@ public class SimpleLoginSystem {
             if (rs.next()) {
                 isLoggedIn = true;
                 currentUser = username;
-                System.out.println("✅ Login successful. Welcome, " + username + "!");
+                System.out.println(" Login successful. Welcome, " + username + "!");
             } else {
-                System.out.println("❌ Invalid credentials.");
+                System.out.println(" Invalid credentials.");
             }
         }
     }
 
     static void logout() {
         if (!isLoggedIn) {
-            System.out.println("⚠️ You are not logged in.");
+            System.out.println(" You are not logged in.");
         } else {
-            System.out.println("👋 Logged out: " + currentUser);
+            System.out.println("Logged out: " + currentUser);
             isLoggedIn = false;
             currentUser = null;
         }
